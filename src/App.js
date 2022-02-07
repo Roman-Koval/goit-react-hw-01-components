@@ -1,0 +1,35 @@
+import Profile from "./components/Profile";
+import user from "./components/Profile/user.json";
+import Statistics from "./components/Statistics";
+import data from "./components/Statistics/data.json";
+import FriendList from "./components/FriendList";
+import friends from "./components/FriendList/friends.json";
+import TransactionHistory from "./components/TransactionHistory";
+import transactions from "./components/TransactionHistory/transactions.json";
+
+import "./App.css";
+
+function App() {
+  return (
+    <div className="App">
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+        statsFollowers={user.stats.followers}
+        statsQuantity={user.stats.views}
+        statsLikes={user.stats.likes}
+      />
+
+      <Statistics title="Upload stats" stats={data} />
+
+      <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
+    </div>
+  );
+}
+
+export default App;
