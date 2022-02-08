@@ -28,11 +28,6 @@ export const Description = styled.div`
   margin-bottom: 20px;
 `;
 
-// export const DescriptionItems = styled.div`
-//   margin: 0px;
-//   line-height: 1.4;
-// `;
-
 export const Name = styled.p`
   font-size: 25px;
   font-weight: 700;
